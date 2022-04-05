@@ -1,0 +1,42 @@
+.spin-box {
+    width: 100%;
+    display: flex;
+}
+
+.spin-box input {
+    text-align: center;
+}
+
+.spin-box .button-area {
+    flex-grow: 1;
+    border: 1px solid black;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spin-box .number-area {
+    flex-grow: 2;
+    border: 1px solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.spin-box--small {
+    font-size : 12px;
+    height: 30px;
+}
+
+.spin-box--medium {
+    font-size : 14px;
+    height: 50px;
+}
+
+.spin-box--large {
+    font-size : 16px;
+    height: 80px;
+}
