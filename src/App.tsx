@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { SpinBox, SpinBoxProps } from './stories/SpinBox';
@@ -29,6 +29,14 @@ function App() {
     setSize('large');
   }
 
+  const onPlusPress = () => {
+    setCount((prevCount) => prevCount + 1);
+  }
+
+  const onMinusPress = () => {
+    setCount((prevCount) => prevCount - 1);
+  }
+
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -51,7 +59,7 @@ function App() {
         <Button label='small' onClick={onSmallClick}></Button>
         <Button label='medium' onClick={onMediumClick}></Button>
         <Button label='large' onClick={onLargeClick}></Button>
-        <SpinBox value={count} onPlusClick={onPlusClick} onMinusClick={onMinusClick} size={size}></SpinBox>
+        <SpinBox value={count} onPlusClick={onPlusClick} onMinusClick={onMinusClick} onPlusPress={onPlusPress} onMinusPress={onMinusPress} size={size}></SpinBox>
       </div>
     </div>
   );
